@@ -23,7 +23,7 @@ export default function Header({ logoPath }: HeaderProps) {
     { name: "SCHEDULE", href: "/schedule" },
     { name: "PARTNERS", href: "/partners" },
     { name: "SOCIALS", href: "/socials" },
-    { name: "JERSEY SALE", href: "/shop" },
+    { name: "SHOP", href: "/shop" },
   ]
 
   return (

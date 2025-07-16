@@ -6,14 +6,14 @@ import { Users, Trophy, Star } from "lucide-react"
 
 export default function ReignEsports() {
   const yourLogoPath = "/3D.webp"
-  const mainAnimationVideoId = "GztU1TQsWho" 
- const youtubeVideos = [
-  { id: "FU0DfREZiSI", time: "4:15", title: "Reign Esports Official Trailer" },
-  { id: "ohkcP8hXBI8", time: "7:30", title: "Behind the Scenes: Team Training" },
-  { id: "tTAkYnZthh8", time: "2:40", title: "Top Plays of the Season" },
-  { id: "kvM_MZ0sS_o", time: "10:00", title: "Player Spotlight: Our Star ADC" },
-]
+  const mainAnimationVideoId = "GztU1TQsWho"
 
+  const youtubeVideos = [
+    { id: "FU0DfREZiSI", time: "4:15", title: "Reign Esports Official Trailer" },
+    { id: "ohkcP8hXBI8", time: "7:30", title: "Behind the Scenes: Team Training" },
+    { id: "tTAkYnZthh8", time: "2:40", title: "Top Plays of the Season" },
+    { id: "kvM_MZ0sS_o", time: "10:00", title: "Player Spotlight: Our Star ADC" },
+  ]
 
   return (
     <div className="relative z-10 py-12">
@@ -95,7 +95,11 @@ export default function ReignEsports() {
             <motion.div
               key={index}
               className="text-center bg-gray-900/70 p-6 rounded-lg shadow-xl glass"
-              whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(147, 51, 234, 0.5)" }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 20px rgba(147, 51, 234, 0.5)",
+                transition: { duration: 0.2, ease: "easeOut" }, 
+              }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2 + index * 0.1 }}
