@@ -21,7 +21,7 @@ export default function Footer({ logoPath }: FooterProps) {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
         
         <div className="mb-4 md:mb-0 md:w-1/3 text-center md:text-left">
-          <p className="text-gray-400 text-lg font-bold tracking-widest">#ABOODY</p>
+          <p className="text-gray-400 text-lg font-bold tracking-widest">#REIGN</p>
         </div>
 
        
