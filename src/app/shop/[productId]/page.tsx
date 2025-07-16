@@ -1,11 +1,11 @@
 "use client"
 
-import React, { useEffect, useState } from "react" // Ensure React is imported
+import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { Facebook, Twitter, PinIcon as Pinterest, PhoneIcon as Whatsapp } from "lucide-react"
 import Image from "next/image"
 
-// Dummy data for products - in a real app, this would come from an API or database
+
 const allProducts = [
   {
     id: "reign-jersey-1",
@@ -49,13 +49,13 @@ const allProducts = [
   },
 ]
 
-// Define the type for the component's props, explicitly making params a Promise
+
 type ProductDetailPageProps = {
   params: Promise<{ productId: string }>
 }
 
 export default function ProductDetailPage({ params }: ProductDetailPageProps) {
-  // Use React.use to unwrap the "promised" params, satisfying the type checker
+ 
   const resolvedParams = React.use(params)
   const { productId } = resolvedParams
 
@@ -69,8 +69,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
   useEffect(() => {
     if (product) {
       setSelectedImage(product.images[0])
-      setSelectedSize(null) // Reset size when product changes
-    }
+      setSelectedSize(null) }
   }, [product])
 
   if (!product) {
@@ -97,7 +96,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-gray-900/70 p-8 rounded-lg shadow-xl glass">
-          {/* Product Image Gallery */}
+          
           <motion.div
             className="flex flex-col items-center"
             initial={{ opacity: 0, x: -50 }}
@@ -114,7 +113,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
               />
             </div>
             <div className="flex gap-3 overflow-x-auto pb-2">
-              {/* Display up to the first 3 images as thumbnails */}
+             
               {product.images.slice(0, 3).map((image, index) => (
                 <motion.div key={index} className="w-20 h-20 relative">
                   <Image
@@ -131,7 +130,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
             </div>
           </motion.div>
 
-          {/* Product Details */}
+          
           <motion.div
             className="flex flex-col"
             initial={{ opacity: 0, x: 50 }}

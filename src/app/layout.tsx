@@ -5,11 +5,15 @@ import "./globals.css"
 import Header from "./components/header"
 import Footer from "./components/footer"
 import AnimatedGridBackground from "./components/animated-gird-background"
+
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Reign Esports - Professional Gaming Organization",
   description: "Official website for Reign Esports. Competing at the highest level.",
+  icons: {
+    icon: "/3D.webp", 
+  },
 }
 
 export default function RootLayout({

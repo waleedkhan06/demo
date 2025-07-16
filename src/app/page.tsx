@@ -6,8 +6,7 @@ import { Users, Trophy, Star } from "lucide-react"
 
 export default function ReignEsports() {
   const yourLogoPath = "/3D.webp"
-  const mainAnimationVideoId = "GztU1TQsWho" // From https://youtu.be/GztU1TQsWho?si=oI0Mnwzu4WTTEjJQ
-
+  const mainAnimationVideoId = "GztU1TQsWho" 
  const youtubeVideos = [
   { id: "FU0DfREZiSI", time: "4:15", title: "Reign Esports Official Trailer" },
   { id: "ohkcP8hXBI8", time: "7:30", title: "Behind the Scenes: Team Training" },
